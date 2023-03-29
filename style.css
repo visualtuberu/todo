@@ -17,18 +17,29 @@
   text-align: center;
 }
 .newTask{
+  
   width: 300px;
   padding-left: 20px;
   margin-right: 20px;
+
   
 }
 .todo-item{
-  background-color: #b3afaf;
+  background-color: #dcdcdc;
   margin: 10px;
-  padding: 5px 20px 5px 20px;
+  padding: 5px 10px 5px 0px;
   display: flex;
   justify-content: space-between;
-  border-radius: 20px;
+  align-items: center;
+  border-radius: 10px;
+}
+.task-counter{
+  font-weight: bold;
+  padding: 14px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background: #acacac;
+  color: #fff;
 }
 .buttons-wrapper{
   margin-right: 30px;

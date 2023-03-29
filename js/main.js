@@ -33,10 +33,14 @@ todosWrapper.addEventListener('click', (event) => {
     if (event.target.value == 'Выполнено') {
       event.target.closest('.todo-item').classList.add('done-ok');
       event.target.value = 'Не выполнено';
+      event.target.classList.add('btn-warning');
+      event.target.classList.remove('btn-primary');
     }
     else if (event.target.value == 'Не выполнено') {
       event.target.closest('.todo-item').classList.remove('done-ok');
       event.target.value = 'Выполнено';
+      event.target.classList.add('btn-primary');
+      event.target.classList.remove('btn-warning');
     }
   }
 
@@ -56,8 +60,8 @@ function addNewTask() {
 			<span class="task">${userTask}</span>
 		  </div>
           <span class= "buttons-wrapper">
-			<input class="done" type="button" value="Выполнено">
-          	<input class="del" type="button" value="Удалить">
+			<input class="btn btn-primary done" type="button" value="Выполнено">
+          	<input class="btn btn-danger del" type="button" value="Удалить">
 		  </span>
 	`;
   todosWrapper.prepend(taskDiv);
